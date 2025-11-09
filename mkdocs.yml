@@ -1,0 +1,64 @@
+site_name: niftydrum documentation
+site_url: https://doc.niftydrum.com
+docs_dir: doc  # Changed from 'docs' to 'doc'
+
+# Repository
+
+repo_name: RonnaTechnologies/doc.niftydrum.com
+repo_url: https://github.com/RonnaTechnologies/doc.niftydrum.com
+
+theme:
+  name: material
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes 
+    - navigation.top
+    - navigation.footer
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotate 
+    - content.code.copy
+    - content.tooltips
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+markdown_extensions:
+  - toc:
+      permalink: true
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+plugins:
+  - search
+  - pdf-export:
+      combined: true
+      combined_output_path: pdf/documentation.pdf
+
