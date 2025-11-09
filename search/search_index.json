@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"NiftyDrum documentation","text":""}]}
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"NiftyDrum documentation","text":""},{"location":"#download-documentation","title":"Download Documentation","text":"<p>You can download the complete documentation as a PDF:</p> <p>\ud83d\udcc4 Download complete documentation as PDF</p>"}]}
