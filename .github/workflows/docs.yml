@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install mkdocs-material
-          pip install mkdocs-pdf-export-plugin
+          pip install mkdocs-with-pdf
       
       - name: Build documentation
         run: mkdocs build

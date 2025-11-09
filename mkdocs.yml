@@ -58,7 +58,9 @@ markdown_extensions:
   - pymdownx.superfences
 plugins:
   - search
-  - pdf-export:
-      combined: true
-      combined_output_path: pdf/niftydrum_documentation.pdf
+  - with-pdf:
+      author: Ronna Technologies
+      copyright: Copyright © 2025 Ronna Technologies
+      cover_subtitle: Official Documentation
+      output_path: pdf/niftydrum_documentation.pdf
 
