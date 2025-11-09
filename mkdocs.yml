@@ -60,5 +60,5 @@ plugins:
   - search
   - pdf-export:
       combined: true
-      combined_output_path: pdf/documentation.pdf
+      combined_output_path: pdf/niftydrum_documentation.pdf
 
