@@ -1,4 +1,4 @@
-site_name: NiftyDrum Documentation
+site_name: NiftyDrum
 site_url: https://doc.niftydrum.com
 docs_dir: doc  # Changed from 'docs' to 'doc'
 copyright: Copyright &copy; 2025 Ronna Technologies
