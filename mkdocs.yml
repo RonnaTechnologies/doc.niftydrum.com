@@ -1,8 +1,7 @@
 site_name: NiftyDrum Documentation
 site_url: https://doc.niftydrum.com
 docs_dir: doc  # Changed from 'docs' to 'doc'
-
-# Repository
+copyright: Copyright &copy; 2025 Ronna Technologies
 
 repo_name: RonnaTechnologies/doc.niftydrum.com
 repo_url: https://github.com/RonnaTechnologies/doc.niftydrum.com
@@ -63,4 +62,8 @@ plugins:
       copyright: Copyright © 2025 Ronna Technologies
       cover_subtitle: Official Documentation
       output_path: pdf/niftydrum_documentation.pdf
-
+extra:
+  social:
+    - icon: fontawesome/solid/file-pdf
+      link: pdf/niftydrum_documentation.pdf
+      name: Download PDF
