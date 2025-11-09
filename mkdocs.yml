@@ -8,6 +8,8 @@ repo_url: https://github.com/RonnaTechnologies/doc.niftydrum.com
 
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
   features:
     - navigation.tracking
     - navigation.tabs
@@ -66,7 +68,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/solid/file-pdf
-      link: pdf/niftydrum_documentation.pdf
+      link: /pdf/niftydrum_documentation.pdf
       name: Download PDF
 extra_css:
   - stylesheets/extra.css
