@@ -4,7 +4,6 @@ docs_dir: doc  # Changed from 'docs' to 'doc'
 copyright: Copyright &copy; 2025 Ronna Technologies
 
 repo_name: RonnaTechnologies/doc.niftydrum.com
-repo_url: https://github.com/RonnaTechnologies/doc.niftydrum.com
 
 theme:
   name: material
@@ -49,8 +48,6 @@ markdown_extensions:
       permalink: true
   - footnotes
   - attr_list
-  - pymdownx.arithmatex:
-      generic: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
