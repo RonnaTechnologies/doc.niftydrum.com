@@ -14,31 +14,58 @@
   margin-right: auto;
 }
 
-body {  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
-  font-size: 12pt;  /* Default is usually 10pt */
-}
+/* PDF-specific font size adjustments */
+@media print {
 
-h1 {
-  font-size: 24pt;
-}
-
-h2 {
-  font-size: 20pt;
-}
-
-h3 {
-  font-size: 16pt;
-}
-
-h4 {
-  font-size: 14pt;
-}
-
-code, pre {
-  font-size: 12pt;
-}
-
-p, ul, li {
-  font-size: 12pt;
-  line-height: 1.6;
+  *{
+    
+    font-family: 'SourceSansPro', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+  }
+  /* Base font size for body text */
+  body {
+    font-family: 'SourceSansPro', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+    font-size: 12pt !important;
+  }
+  
+  /* Headers */
+  h1 {
+    font-size: 28pt !important;
+  }
+  
+  h2 {
+    font-size: 24pt !important;
+  }
+  
+  h3 {
+    font-size: 20pt !important;
+  }
+  
+  h4 {
+    font-size: 18pt !important;
+  }
+  
+  h5 {
+    font-size: 16pt !important;
+  }
+  
+  h6 {
+    font-size: 14pt !important;
+  }
+  
+  /* Table of Contents */
+  .pdf-toc,
+  .pdf-toc li,
+  .pdf-toc a {
+    font-size: 12pt !important;
+  }
+  
+  /* Paragraphs and general text */
+  p, li, td, th {
+    font-size: 12pt !important;
+  }
+  
+  /* Code blocks */
+  code, pre {
+    font-size: 12pt !important;
+  }
 }
