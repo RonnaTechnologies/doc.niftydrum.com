@@ -11,7 +11,7 @@ NiftyDrum is a trigger-to-MIDI conversion module that transforms piezo and FSR s
 NiftyDrum delivers high-level MIDI performance in 4 easy steps:
 
 - **Connect sensors**: Attach up to 9 piezo sensors and 1 FSR to the terminal blocks
-- **Plug in**: Connect to your DAW or drum module via USB
+- **Plug in**: Connect to your DAW, Raspberry Pi, or drum module via USB
 - **Configure**: Use the web-based GUI to adjust trigger parameters, MIDI mapping, and velocity curves
 - **Play**: Notes are transmitted instantly with imperceptible latency
 
@@ -20,7 +20,7 @@ NiftyDrum delivers high-level MIDI performance in 4 easy steps:
 ### Hardware
 
 - **Piezo inputs**: 9 channels
-- **FSR input**: 1 channel (hi-hat pedal controller)
+- **FSR input**: 1 channel (hi-hat controller)
 - **Connector type**: Terminal blocks
 - **USB interface**: Type-C
 - **Dimensions**: 65 × 56.5 mm
