@@ -1,6 +1,7 @@
-# NiftyDrum Specifications { style="text-align: center;" }
+# About NiftyDrum { style="text-align: center;" }
 
-![NiftyDrum Board](assets/board.jpg){ width="360" .img-shadow .center}
+![NiftyDrum Logo](assets/nd-logo.png){ width="400" .light-mode-only .center}
+![NiftyDrum Logo](assets/nd-logo-dark.png){ width="400" .dark-mode-only .center}
 
 ## Description
 
