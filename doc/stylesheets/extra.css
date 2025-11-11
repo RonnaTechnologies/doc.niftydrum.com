@@ -1,3 +1,11 @@
+[data-md-color-scheme="default"] .dark-mode-only {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .light-mode-only {
+  display: none;
+}
+
 .img-shadow {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -21,6 +29,23 @@
     
     font-family: 'SourceSansPro', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
   }
+
+  .dark-mode-only 
+  {
+    display: none !important;
+  }
+  
+  .light-mode-only 
+  {
+    display: block !important;
+  }
+
+  .img-shadow-lg 
+  {
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+  }
+
   /* Base font size for body text */
   body {
     font-family: 'SourceSansPro', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
