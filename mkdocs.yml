@@ -2,7 +2,6 @@ site_name: NiftyDrum
 site_url: https://doc.niftydrum.com
 docs_dir: doc  # Changed from 'docs' to 'doc'
 copyright: Copyright &copy; 2025 Ronna Technologies
-
 repo_name: RonnaTechnologies/doc.niftydrum.com
 
 theme:
@@ -13,7 +12,7 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.indexes 
+    - navigation.indexes
     - navigation.top
     - navigation.footer
     - navigation.sections
@@ -21,7 +20,7 @@ theme:
     - search.suggest
     - search.highlight
     - content.tabs.link
-    - content.code.annotate 
+    - content.code.annotate
     - content.code.copy
     - content.tooltips
   palette:
@@ -43,6 +42,7 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
+
 markdown_extensions:
   - toc:
       permalink: true
@@ -55,6 +55,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
 plugins:
   - search
   - with-pdf:
@@ -62,10 +63,14 @@ plugins:
       copyright: Copyright © 2025 Ronna Technologies
       cover_subtitle: Official Documentation
       output_path: pdf/niftydrum_documentation.pdf
+      exclude_pages:
+        - 3.videos
+
 extra:
   social:
     - icon: fontawesome/solid/file-pdf
       link: /pdf/niftydrum_documentation.pdf
       name: Download PDF
+
 extra_css:
   - stylesheets/extra.css

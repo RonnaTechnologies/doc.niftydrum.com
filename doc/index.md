@@ -1,4 +1,4 @@
-# About NiftyDrum { style="text-align: center;" }
+# About NiftyDrum
 
 ![NiftyDrum Logo](assets/nd-logo.png){ width="400" .light-mode-only .center}
 ![NiftyDrum Logo](assets/nd-logo-dark.png){ width="400" .dark-mode-only .center}
