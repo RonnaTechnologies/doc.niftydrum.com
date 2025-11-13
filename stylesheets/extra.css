@@ -22,19 +22,21 @@
   margin-right: auto;
 }
 
+
+@font-face 
+{
+  font-family: 'SourceSansPro';
+  src: url('assets/SourceSansPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body
 {
   font-family: 'SourceSansPro', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
 }
 
 
-@font-face 
-{
-  font-family: 'SourceSansPro';
-  src: url('/assets/SourceSansPro.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 /* PDF-specific font size adjustments */
 @media print {
