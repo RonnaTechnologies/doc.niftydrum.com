@@ -64,7 +64,7 @@ plugins:
       cover_subtitle: Official Documentation
       output_path: pdf/niftydrum_documentation.pdf
       exclude_pages:
-        - 3.videos
+        - 5.videos
 
 extra:
   social:
