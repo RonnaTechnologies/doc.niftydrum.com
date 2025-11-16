@@ -499,6 +499,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Configure NiftyDrum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-board-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Board Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger-parameters-per-trigger-including-hi-hat-cymbal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger Parameters (Per Trigger, Including Hi-Hat Cymbal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hi-hat-pedal-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hi-Hat Pedal Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-app-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the app works
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -620,9 +670,114 @@
 
 <h1 id="the-app">The App<a class="headerlink" href="#the-app" title="Permanent link">&para;</a></h1>
 <h2 id="configure-niftydrum">Configure NiftyDrum<a class="headerlink" href="#configure-niftydrum" title="Permanent link">&para;</a></h2>
-<p>NiftyDrum is highly configurable.</p>
+<p>NiftyDrum is fully configurable, allowing you to adjust parameters like scan time, mask time, decay, threshold, etc.
+To simplify customization, a dedicated desktop application is available, compatible with Windows, Linux, and macOS.</p>
+<p>Below are all the different commands the app can send to the board.</p>
+<h3 id="general-board-commands">General Board Commands<a class="headerlink" href="#general-board-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset</td>
+<td>Restart the board in bootloader mode</td>
+</tr>
+<tr>
+<td>Serial number</td>
+<td>Retrieve the board’s unique serial number</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>Retrieve the current firmware version</td>
+</tr>
+<tr>
+<td>Save current parameters</td>
+<td>Persist current settings to the board</td>
+</tr>
+<tr>
+<td>Load parameters</td>
+<td>Load previously saved board parameters</td>
+</tr>
+<tr>
+<td>Factory reset</td>
+<td>Reset all parameters to factory defaults</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trigger-parameters-per-trigger-including-hi-hat-cymbal">Trigger Parameters (Per Trigger, Including Hi-Hat Cymbal)<a class="headerlink" href="#trigger-parameters-per-trigger-including-hi-hat-cymbal" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set/get velocity curve</td>
+<td>Adjust or retrieve the velocity response curve</td>
+</tr>
+<tr>
+<td>Set/get threshold</td>
+<td>Configure the trigger activation threshold</td>
+</tr>
+<tr>
+<td>Scan time</td>
+<td>Set/get the trigger scan time</td>
+</tr>
+<tr>
+<td>Mask time</td>
+<td>Set or adjust the trigger mask time</td>
+</tr>
+<tr>
+<td>Decay time</td>
+<td>Adjust the decay time of the trigger</td>
+</tr>
+<tr>
+<td>Gain</td>
+<td>Adjust the gain level of the trigger</td>
+</tr>
+<tr>
+<td>MIDI Note</td>
+<td>Assign the MIDI note for the trigger</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hi-hat-pedal-parameters">Hi-Hat Pedal Parameters<a class="headerlink" href="#hi-hat-pedal-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Update interval</td>
+<td>Set the hi-hat pedal update frequency</td>
+</tr>
+<tr>
+<td>Noise threshold</td>
+<td>Ignore pedal changes below this value</td>
+</tr>
+<tr>
+<td>Pedal offset</td>
+<td>Determine if the hi-hat is fully closed</td>
+</tr>
+<tr>
+<td>Velocity threshold</td>
+<td>Set the velocity threshold for foot chick</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-the-app-works">How the app works<a class="headerlink" href="#how-the-app-works" title="Permanent link">&para;</a></h3>
+<p>The app simplifies customization by organizing everything logically: instruments are selected via a drop-down, while MIDI notes and velocity curves are managed separately from trigger settings for a cleaner, more efficient setup.</p>
 <h2 id="how-to-install-the-app">How to install the app<a class="headerlink" href="#how-to-install-the-app" title="Permanent link">&para;</a></h2>
-<p><a href="https://niftydrum.com/#software" target="_blank">NiftyDrum.com</a></p>
+<p>he app is available for Windows, macOS, and Linux and can be downloaded directly from the official <a href="https://niftydrum.com/#software" target="_blank">NiftyDrum.com</a> website. Be sure to follow the OS-specific installation instructions provided on the site.</p>
 <p><img alt="..." class="light-mode-only img-shadow-lg" src="../assets/app-trigger-light.png" />
 <img alt="..." class="dark-mode-only img-shadow-lg" src="../assets/app-trigger.png" /></p>
 <p><img alt="..." class="light-mode-only img-shadow-lg" src="../assets/app-hihat-light.png" />
