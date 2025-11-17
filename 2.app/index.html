@@ -864,11 +864,18 @@ Note that, if that's not already done, you will have to install the <a href="htt
 <p>The macOS version of the app is provided as a <code>.zip</code> file. Just extract it and run the application.
 If you're using an Apple Silicon Mac, you may be prompted to install Rosetta the first time you launch the app.</p>
 <h2 id="piezo-trigger-configuration">Piezo trigger configuration<a class="headerlink" href="#piezo-trigger-configuration" title="Permanent link">&para;</a></h2>
-<p><img alt="..." class="light-mode-only img-shadow-lg" src="../assets/app-trigger-light.png" />
-<img alt="..." class="dark-mode-only img-shadow-lg" src="../assets/app-trigger.png" /></p>
+<p>Customize each piezo trigger by selecting your desired instrument from the dropdown menu.
+The screenshot below illustrates the process for configuring the snare drum.</p>
+<p><img alt="Snare drum trigger configuration" class="light-mode-only img-shadow-lg" src="../assets/app-trigger-light.png" />
+<img alt="Snare drum trigger configuration" class="dark-mode-only img-shadow-lg" src="../assets/app-trigger.png" /></p>
+<p>On the left side, you can assign the MIDI note for the pad—such as note 38 for the snare. Below the note input, you’ll find the velocity curve editor, which uses Bézier controls for precise adjustments. You can drag and drop the endpoints and the two middle control points to shape the curve according to your needs.
+The horizontal axis reflects the raw MIDI velocity detected by the sensor, while the vertical axis shows the velocity value transmitted over USB. This setup lets you fine-tune the responsiveness and dynamics of your triggers.</p>
+<p>Moving from left to right, you can adjust the trigger gain within a range of 0.1 to 5. This allows you to boost the input sensitivity of the trigger, enhancing the volume of ghost notes when the velocity curve alone isn’t sufficient. It’s important to note that the gain is applied after a strike has been detected, so it doesn’t impact the threshold setting.</p>
+<p>Next is the threshold setting, which sets the minimum signal level the piezo must exceed for a hit to register. This ensures only intentional strikes are detected, effectively filtering out unwanted noise and preventing false triggers.</p>
 <h2 id="hi-hat-pedal-configuration">Hi-hat pedal configuration<a class="headerlink" href="#hi-hat-pedal-configuration" title="Permanent link">&para;</a></h2>
-<p><img alt="..." class="light-mode-only img-shadow-lg" src="../assets/app-hihat-light.png" />
-<img alt="..." class="dark-mode-only img-shadow-lg" src="../assets/app-hihat.png" /></p>
+<p>The last item of the dropdown menu is the hi-hat pedal configuration. It is a bit different from the other inputs.</p>
+<p><img alt="Hi-hat pedal configuration" class="light-mode-only img-shadow-lg" src="../assets/app-hihat-light.png" />
+<img alt="Hi-hat pedal configuration" class="dark-mode-only img-shadow-lg" src="../assets/app-hihat.png" /></p>
 
 
 
