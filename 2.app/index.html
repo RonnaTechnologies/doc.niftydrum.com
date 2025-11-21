@@ -924,7 +924,7 @@ If you're using an Apple Silicon Mac, you may be prompted to install Rosetta the
 The screenshot below illustrates the process for configuring the snare drum.</p>
 <p><img alt="Snare drum trigger configuration" class="light-mode-only img-shadow-lg" src="../assets/app-trigger-light.png" />
 <img alt="Snare drum trigger configuration" class="dark-mode-only img-shadow-lg" src="../assets/app-trigger.png" /></p>
-<p>On the left side, you can assign the MIDI note for the pad—such as note 38 for the snare. Below the note input, you’ll find the velocity curve editor, which uses Bézier controls for precise adjustments. You can drag and drop the endpoints and the two middle control points to shape the curve according to your needs.
+<p>On the left side, you can assign the MIDI note for the pad, such as note 38 for the snare. Below the note input, you’ll find the velocity curve editor, which uses Bézier controls for precise adjustments. You can drag and drop the endpoints and the two middle control points to shape the curve according to your needs.
 The horizontal axis reflects the raw MIDI velocity detected by the sensor, while the vertical axis shows the velocity value transmitted over USB. This setup lets you fine-tune the responsiveness and dynamics of your triggers.</p>
 <p>Moving from left to right, you can adjust the trigger gain within a range of 0.1 to 5. This allows you to boost the input sensitivity of the trigger, enhancing the volume of ghost notes when the velocity curve alone isn’t sufficient. It’s important to note that the gain is applied after a strike has been detected, so it doesn’t impact the threshold setting.</p>
 <p>Next is the threshold setting, which sets the minimum signal level the piezo must exceed for a hit to register. This ensures only intentional strikes are detected, effectively filtering out unwanted noise and preventing false triggers.</p>
@@ -988,9 +988,19 @@ The horizontal axis reflects the raw MIDI velocity detected by the sensor, while
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Troubleshooting</p>
-<p>If the firmware upload fails or the board is accidentally unplugged. Download <a href="https://github.com/TheKikGen/stm32-tkg-hid-bootloader/tree/master/cli/binaries_dist" target="_blank"><code>tkg-flash</code></a>. <strong>Double-press the reset button</strong> on the board. Upload the firmware via terminal:
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./tkg-flash<span class="w"> </span>NiftyDrum.bin
-</span></code></pre></div></p>
+<p>If the firmware upload fails or the board is accidentally unplugged. Download <a href="https://github.com/TheKikGen/stm32-tkg-hid-bootloader/tree/master/cli/binaries_dist" target="_blank"><code>tkg-flash</code></a>. <strong>Double-press the reset button</strong> on the board. Upload the firmware via terminal:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Unix</label><label for="__tabbed_2_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./tkg-flash<span class="w"> </span>NiftyDrum.bin
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./tkg-flash.exe<span class="w"> </span>NiftyDrum.bin
+</span></code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <p>Once the upload is complete, the board will <strong>restart automatically</strong>, and the app will <strong>reconnect</strong> to it.</p>
 

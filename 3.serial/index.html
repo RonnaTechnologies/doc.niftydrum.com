@@ -467,6 +467,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Serial Protocol
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -483,6 +501,125 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command Syntax
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Syntax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pad-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pad Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pad Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hi-hat-controller-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hi-Hat Controller Parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -560,6 +697,153 @@
 
 
 <h1 id="serial-protocol">Serial Protocol<a class="headerlink" href="#serial-protocol" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The NiftyDrum board establishes a <strong>virtual serial port over USB</strong> when connected to a computer. It also features a <strong>USART interface</strong> on the Raspberry Pi-compatible GPIO port.</p>
+<div class="admonition warning">
+<p class="admonition-title">USART Voltage Limit</p>
+<p>The USART pins are <strong>3.3V only</strong>. Exceeding this voltage may damage the board.</p>
+</div>
+<h2 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">&para;</a></h2>
+<h3 id="special-commands">Special Commands<a class="headerlink" href="#special-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>/reset</code></strong></td>
+<td>Reboots the board in bootloader mode.</td>
+</tr>
+<tr>
+<td><strong><code>/factory_reset</code></strong></td>
+<td>Resets all settings to factory defaults.</td>
+</tr>
+<tr>
+<td><strong><code>/sn</code></strong></td>
+<td>Returns the board's serial number.</td>
+</tr>
+<tr>
+<td><strong><code>/version</code></strong></td>
+<td>Returns the current firmware version.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters-commands">Parameters Commands<a class="headerlink" href="#parameters-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>/load params all</code></strong></td>
+<td>Loads all parameters from EEPROM.</td>
+</tr>
+<tr>
+<td><strong><code>/save params all</code></strong></td>
+<td>Saves all current parameters to EEPROM.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pad-parameters">Pad Parameters<a class="headerlink" href="#pad-parameters" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Instrument Placeholder</p>
+<p>The examples below use <code>snare</code>. Replace it with <code>hihat</code>, <code>kick</code>, <code>crash1</code>, <code>tom1</code>, <code>tom3</code>, <code>ride</code>, <code>tom2</code>, or <code>crash2</code> as needed.</p>
+</div>
+<h3 id="getters">Getters<a class="headerlink" href="#getters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Example Reply</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>/get snare threshold</code></strong></td>
+<td>Gets the trigger threshold.</td>
+<td><code>15</code></td>
+</tr>
+<tr>
+<td><strong><code>/get snare gain</code></strong></td>
+<td>Gets the sensor gain.</td>
+<td><code>1.5</code></td>
+</tr>
+<tr>
+<td><strong><code>/get snare scan</code></strong></td>
+<td>Gets the scan time (µs).</td>
+<td><code>3000</code> (3ms)</td>
+</tr>
+<tr>
+<td><strong><code>/get snare mask</code></strong></td>
+<td>Gets the mask time (µs).</td>
+<td><code>20000</code> (20ms)</td>
+</tr>
+<tr>
+<td><strong><code>/get snare decay</code></strong></td>
+<td>Gets the decay time (µs).</td>
+<td><code>60000</code> (60ms)</td>
+</tr>
+<tr>
+<td><strong><code>/get snare note</code></strong></td>
+<td>Gets the MIDI note assigned to the pad.</td>
+<td><code>36</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="setters">Setters<a class="headerlink" href="#setters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Example Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>/set snare threshold</code></strong></td>
+<td>Sets the trigger threshold.</td>
+<td><code>/set snare threshold 15</code></td>
+</tr>
+<tr>
+<td><strong><code>/set snare gain</code></strong></td>
+<td>Sets the sensor gain.</td>
+<td><code>/set snare gain 1.5</code></td>
+</tr>
+<tr>
+<td><strong><code>/set snare scan</code></strong></td>
+<td>Sets the scan time (µs).</td>
+<td><code>/set snare scan 3000</code></td>
+</tr>
+<tr>
+<td><strong><code>/set snare mask</code></strong></td>
+<td>Sets the mask time (µs).</td>
+<td><code>/set snare mask 20000</code></td>
+</tr>
+<tr>
+<td><strong><code>/set snare decay</code></strong></td>
+<td>Sets the decay time (µs).</td>
+<td><code>/set snare decay 60000</code></td>
+</tr>
+<tr>
+<td><strong><code>/set snare note</code></strong></td>
+<td>Sets the MIDI note for the pad.</td>
+<td><code>/set snare note 36</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Value Validation</p>
+<p>The board <strong>does not validate</strong> input values. Incorrect values may cause unexpected behavior.</p>
+</div>
+<h2 id="hi-hat-controller-parameters">Hi-Hat Controller Parameters<a class="headerlink" href="#hi-hat-controller-parameters" title="Permanent link">&para;</a></h2>
 
 
 
