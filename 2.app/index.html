@@ -589,7 +589,7 @@
   <a href="#macos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        macOS
+        MacOS
       
     </span>
   </a>
@@ -616,21 +616,77 @@
   <a href="#hi-hat-pedal-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hi-hat pedal configuration
+        Hi-Hat Pedal Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hi-Hat Pedal Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#firmware-updates" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#cc-message-behavior" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Firmware updates
+        CC Message Behavior
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foot-chick-note-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foot Chick Note Trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware upgrade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firmware upgrade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps-to-upgrade-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps to Upgrade Firmware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -877,8 +933,8 @@ Note that, if that's not already done, you will have to install the <a href="htt
 </div>
 </div>
 </div>
-<h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
-<p>The macOS version of the app is provided as a <code>.zip</code> file. Just extract it and run the application.
+<h3 id="macos">MacOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<p>The MacOS version of the app is provided as a <code>.zip</code> file. Just extract it and run the application.
 If you're using an Apple Silicon Mac, you may be prompted to install Rosetta the first time you launch the app.</p>
 <h2 id="piezo-trigger-configuration">Piezo trigger configuration<a class="headerlink" href="#piezo-trigger-configuration" title="Permanent link">&para;</a></h2>
 <p>Customize each piezo trigger by selecting your desired instrument from the dropdown menu.
@@ -889,11 +945,71 @@ The screenshot below illustrates the process for configuring the snare drum.</p>
 The horizontal axis reflects the raw MIDI velocity detected by the sensor, while the vertical axis shows the velocity value transmitted over USB. This setup lets you fine-tune the responsiveness and dynamics of your triggers.</p>
 <p>Moving from left to right, you can adjust the trigger gain within a range of 0.1 to 5. This allows you to boost the input sensitivity of the trigger, enhancing the volume of ghost notes when the velocity curve alone isn’t sufficient. It’s important to note that the gain is applied after a strike has been detected, so it doesn’t impact the threshold setting.</p>
 <p>Next is the threshold setting, which sets the minimum signal level the piezo must exceed for a hit to register. This ensures only intentional strikes are detected, effectively filtering out unwanted noise and preventing false triggers.</p>
-<h2 id="hi-hat-pedal-configuration">Hi-hat pedal configuration<a class="headerlink" href="#hi-hat-pedal-configuration" title="Permanent link">&para;</a></h2>
-<p>The last item of the dropdown menu is the hi-hat pedal configuration. It is a bit different from the other inputs.</p>
-<p><img alt="Hi-hat pedal configuration" class="light-mode-only img-shadow-lg" src="../assets/app-hihat-light.png" />
-<img alt="Hi-hat pedal configuration" class="dark-mode-only img-shadow-lg" src="../assets/app-hihat.png" /></p>
-<h2 id="firmware-updates">Firmware updates<a class="headerlink" href="#firmware-updates" title="Permanent link">&para;</a></h2>
+<h2 id="hi-hat-pedal-configuration">Hi-Hat Pedal Configuration<a class="headerlink" href="#hi-hat-pedal-configuration" title="Permanent link">&para;</a></h2>
+<p>The last item in the dropdown menu is the <strong>hi-hat pedal configuration</strong>. Unlike other inputs, it does not include standard parameters like scan time or mask time.</p>
+<div class="admonition note">
+<p class="admonition-title">Hi-Hat Implementation Status</p>
+<p>The hi-hat implementation is currently <strong>experimental</strong>. The app settings may evolve in future updates.</p>
+</div>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<p>The hi-hat pedal configuration includes four key parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Update interval</strong></td>
+<td>Sets the frequency at which the hi-hat pedal updates.</td>
+</tr>
+<tr>
+<td><strong>Noise threshold</strong></td>
+<td>Ignores pedal changes below this value to filter out noise.</td>
+</tr>
+<tr>
+<td><strong>Pedal offset</strong></td>
+<td>Determines whether the hi-hat is fully closed.</td>
+</tr>
+<tr>
+<td><strong>Velocity threshold (Trig)</strong></td>
+<td>Sets the sensitivity threshold for triggering a foot chick note.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Hi-hat pedal configuration (Light Mode)" class="light-mode-only img-shadow-lg" src="../assets/app-hihat-light.png" />
+<img alt="Hi-hat pedal configuration (Dark Mode)" class="dark-mode-only img-shadow-lg" src="../assets/app-hihat.png" /></p>
+<h3 id="cc-message-behavior">CC Message Behavior<a class="headerlink" href="#cc-message-behavior" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The <strong>Update interval</strong> defines the minimum delay (in microseconds) between two CC messages, typically set to <strong>10ms</strong>.</li>
+<li>The <strong>Noise threshold</strong> sets the minimum change in value required to send a CC message.</li>
+</ul>
+<h3 id="foot-chick-note-trigger">Foot Chick Note Trigger<a class="headerlink" href="#foot-chick-note-trigger" title="Permanent link">&para;</a></h3>
+<p>The <strong>Pedal offset</strong> and <strong>Velocity threshold (Trig)</strong> determine whether a foot chick note is sent, with the latter acting as a sensitivity threshold.</p>
+<h2 id="firmware-upgrade">Firmware upgrade<a class="headerlink" href="#firmware-upgrade" title="Permanent link">&para;</a></h2>
+<p>The app also supports <strong>firmware upgrades</strong> for your board.</p>
+<h3 id="steps-to-upgrade-firmware">Steps to Upgrade Firmware<a class="headerlink" href="#steps-to-upgrade-firmware" title="Permanent link">&para;</a></h3>
+<ol>
+<li>From the app's main screen, click the <strong>"gear" icon</strong> to access the <strong>Advanced Settings</strong> screen.</li>
+<li>Select a firmware file (if downloaded as a <code>.zip</code>, <strong>unzip it first</strong>).</li>
+<li>Ensure the file has a <code>.bin</code> extension and is an <strong>officially supported firmware</strong>.</li>
+<li>Click the <strong><code>Upload</code></strong> button and wait for the process to complete.</li>
+</ol>
+<p><img alt="Firmware Update (Light Mode)" class="light-mode-only img-shadow-lg" src="../assets/app-fw-light.png" />
+<img alt="Firmware Update (Dark Mode)" class="dark-mode-only img-shadow-lg" src="../assets/app-fw.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Do not unplug the board</strong> during the firmware upload.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Troubleshooting</p>
+<p>If the firmware upload fails or the board is accidentally unplugged. Download <a href="https://github.com/TheKikGen/stm32-tkg-hid-bootloader/tree/master/cli/binaries_dist" target="_blank"><code>tkg-flash</code></a>. <strong>Double-press the reset button</strong> on the board. Upload the firmware via terminal:
+   <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./tkg-flash<span class="w"> </span>NiftyDrum.bin
+</span></code></pre></div></p>
+</div>
+<p>Once the upload is complete, the board will <strong>restart automatically</strong>, and the app will <strong>reconnect</strong> to it.</p>
 
 
 
