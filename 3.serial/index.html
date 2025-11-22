@@ -537,10 +537,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Command Syntax">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#special-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -550,8 +549,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#parameters-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -560,14 +559,10 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Parameters Commands">
+      <ul class="md-nav__list">
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#pad-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -576,8 +571,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pad Parameters">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#getters" class="md-nav__link">
@@ -704,7 +698,10 @@
 <p>The USART pins are <strong>3.3V only</strong>. Exceeding this voltage may damage the board.</p>
 </div>
 <h2 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">&para;</a></h2>
-<h3 id="special-commands">Special Commands<a class="headerlink" href="#special-commands" title="Permanent link">&para;</a></h3>
+<p>Almost all commands start with <code>/</code>.
+Some commands require arguments, in which case the syntax is <code>/command arg1 arg2 arg3</code>.</p>
+<h2 id="special-commands">Special Commands<a class="headerlink" href="#special-commands" title="Permanent link">&para;</a></h2>
+<p>Special commands require no parameters, they either alter the board's behavior, or give specific information about the board.</p>
 <table>
 <thead>
 <tr>
@@ -731,7 +728,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parameters-commands">Parameters Commands<a class="headerlink" href="#parameters-commands" title="Permanent link">&para;</a></h3>
+<h2 id="parameters-commands">Parameters Commands<a class="headerlink" href="#parameters-commands" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -750,7 +747,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="pad-parameters">Pad Parameters<a class="headerlink" href="#pad-parameters" title="Permanent link">&para;</a></h2>
+<h3 id="pad-parameters">Pad Parameters<a class="headerlink" href="#pad-parameters" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Instrument Placeholder</p>
 <p>The examples below use <code>snare</code>. Replace it with <code>hihat</code>, <code>kick</code>, <code>crash1</code>, <code>tom1</code>, <code>tom3</code>, <code>ride</code>, <code>tom2</code>, or <code>crash2</code> as needed.</p>
