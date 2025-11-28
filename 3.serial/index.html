@@ -615,6 +615,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Hi-Hat Controller Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuous-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continuous Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -860,7 +888,110 @@
 <p>The board <strong>does not validate</strong> input values. Incorrect values may cause unexpected behavior.</p>
 </div>
 <h2 id="hi-hat-controller-parameters">Hi-Hat Controller Parameters<a class="headerlink" href="#hi-hat-controller-parameters" title="Permanent link">&para;</a></h2>
-<p>The hi-hat controller behaves differently.</p>
+<p>The hi-hat controller operates with dual functionality:</p>
+<ul>
+<li>It sends CC (Control Change) messages when the pedal is pressed or released slowly.</li>
+<li>It triggers MIDI notes when the pedal movement is fast (e.g., a foot splash or chick).</li>
+</ul>
+<p>These two sensors are denoted FSRC for FSR continuous, and FSRT for FSR trigger.</p>
+<h3 id="continuous-parameters">Continuous Parameters<a class="headerlink" href="#continuous-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Example Reply</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>/get fsrc timeout</code></strong></td>
+<td>Gets the minimum time interval between two CC messages (µs).</td>
+<td><code>9000</code></td>
+</tr>
+<tr>
+<td><strong><code>/get fsrc threshold</code></strong></td>
+<td>Gets FSR noise threshold.</td>
+<td><code>30</code></td>
+</tr>
+<tr>
+<td><strong><code>/get fsrc offset</code></strong></td>
+<td>Gets the value from which the pedal is considered as fully closed.</td>
+<td><code>105</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>/set fsrc timeout</code></strong></td>
+<td>Sets the minimum time interval between two CC messages (µs).</td>
+</tr>
+<tr>
+<td><strong><code>/set fsrc threshold</code></strong></td>
+<td>Sets FSR noise threshold.</td>
+</tr>
+<tr>
+<td><strong><code>/set fsrc offset</code></strong></td>
+<td>Sets the value from which the pedal is considered as fully closed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trigger-parameters">Trigger Parameters<a class="headerlink" href="#trigger-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Example Reply</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>/get fsrt threshold</code></strong></td>
+<td>Gets the minimum time interval between two CC messages (µs).</td>
+<td><code>9000</code></td>
+</tr>
+<tr>
+<td><strong><code>/get fsrt scan</code></strong></td>
+<td>Gets FSR noise threshold.</td>
+<td><code>30</code></td>
+</tr>
+<tr>
+<td><strong><code>/get fsrt velocity</code></strong></td>
+<td>Gets the value from which the pedal is considered as fully closed.</td>
+<td><code>105</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>/set fsrt threshold</code></strong></td>
+<td>Sets the minimum time interval between two CC messages (µs).</td>
+</tr>
+<tr>
+<td><strong><code>/set fsrt scan</code></strong></td>
+<td>Sets FSR noise threshold.</td>
+</tr>
+<tr>
+<td><strong><code>/set fsrt velocity</code></strong></td>
+<td>Sets the value from which the pedal is considered as fully closed.</td>
+</tr>
+</tbody>
+</table>
 
 
 
