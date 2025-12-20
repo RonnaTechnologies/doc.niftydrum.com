@@ -50,10 +50,13 @@ body
 /* PDF-specific font size adjustments */
 @media print {
 
-  *
-  {
-    
-    font-family: 'SourceSansPro', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+  *:not(.highlight):not(.highlight *) {
+    font-family: 'Source Sans Pro', 'Roboto', 'Helvetica', 'Arial', sans-serif !important;
+  }
+
+  .highlight, .highlight * {
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: .9rem;
   }
 
   .md-typeset .admonition-title::before
@@ -90,6 +93,7 @@ body
     font-size: 12pt !important;
     text-align: justify;
   }
+
   
   /* Headers */
   h1 {
