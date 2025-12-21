@@ -664,10 +664,30 @@
 <h2 id="arduino-ide">Arduino IDE<a class="headerlink" href="#arduino-ide" title="Permanent link">&para;</a></h2>
 <p>Because NiftyDrum is based on the same microcontroller as the Blue Pill, it is possible to program the board using the Arduino IDE.
 But for that, you first need to have a C++ compiler that targets the STM32F1.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In this section, it is assumed that you have already installed the Arduino IDE.</p>
+</div>
 <h3 id="arm-none-eabi-toolchain">ARM None-EABI toolchain<a class="headerlink" href="#arm-none-eabi-toolchain" title="Permanent link">&para;</a></h3>
 <p>If you are a Linux user, you can install the <strong>ARM None-EABI toolchain </strong>directly from your package manager. The package is typically named <strong><code>gcc-arm-none-eabi</code></strong>.
 For other platforms, download the official ARM toolchain from <a href="https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads" target="_blank">Developer.arm.com</a> – ARM GNU Toolchain Downloads. Make sure to select the correct version for your operating system.</p>
 <h3 id="arduino-stm32-sdk">Arduino STM32 SDK<a class="headerlink" href="#arduino-stm32-sdk" title="Permanent link">&para;</a></h3>
+<p>Assuming you have a working ARM None-EABI toolchain, you then need to get the Arduino STM32 RonnaTech SDK.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although it is called Arduino STM32 RonnaTech SDK, the SDK is a fork of <a href="https://github.com/rogerclarkmelbourne/Arduino_STM32" target="_blank">Roger Clark's Arduino STM32 repository</a> with some minor modifications.</p>
+</div>
+<p>The SDK is pretty simple to install and configure.
+Here is how to proceed:</p>
+<ul>
+<li>First, download and unzip the <a href="https://ronnatech.com/sdm_downloads/arduino_stm32/" target="_blank">Arduino STM32 RonnaTech SDK</a>.</li>
+<li>If you are a Linux user:<ul>
+<li>Go to your <code>home</code> diretory, then, into <code>Arduino</code> folder.</li>
+<li>Create a new folder named <code>hardware</code> and move the <code>Arduino_STM32</code> into that folder.</li>
+</ul>
+</li>
+<li>If you are a Windows user:</li>
+</ul>
 <p><a href="https://ronnatech.com/sdm_downloads/arduino_stm32/" target="_blank">Arduino STM32 SDK</a></p>
 <h3 id="blink">Blink<a class="headerlink" href="#blink" title="Permanent link">&para;</a></h3>
 <div class="language-cpp highlight"><span class="filename">blink.ino</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// the setup function runs once when you press reset or power the board</span>
