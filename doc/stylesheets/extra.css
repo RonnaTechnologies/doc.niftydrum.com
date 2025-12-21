@@ -119,25 +119,18 @@ body
   h6 {
     font-size: 14pt !important;
   }
+
   
-  ul li ul {
+  ul ul 
+  {
     margin-left: .4em !important;
     padding-left: .2em !important;
   }
   
-  /* Target the inner list items */
-  ul li ul li {
+  ul ul li 
+  {
     margin-left: .2em !important;
     padding-left: 0.1em !important;
-  }
-  
-  /* Alternative: if the structure is flatter */
-  ul ul {
-    margin-left: .4em !important;
-  }
-  
-  ul ul li {
-    margin-left: .2em !important;
   }
 
   /* Table of Contents */
