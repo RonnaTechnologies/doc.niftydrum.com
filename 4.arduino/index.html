@@ -571,7 +571,7 @@
   <a href="#arm-none-eabi-toolchain" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ARM None-EABI toolchain
+        ARM None-EABI Toolchain
       
     </span>
   </a>
@@ -587,13 +587,52 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arduino STM32 SDK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation Steps
+      
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#blink" class="md-nav__link">
+  <a href="#configure-the-toolchain-path" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Blink
+        Configure the Toolchain Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arduino-ide-choose-the-correct-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arduino IDE: Choose the Correct Board
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blink-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blink Example
       
     </span>
   </a>
@@ -662,47 +701,53 @@
 <p>NiftyDrum is powered by the <strong>STM32F103C8T6</strong> microcontroller, the same chip found in the iconic "<strong>Blue Pill</strong>" development board.</p>
 <p>If you're unfamiliar with the Blue Pill, it’s a widely recognized and versatile board based on the STM32F103C microcontroller family. With <strong>72MHz</strong> clock speed, <strong>64KB of flash</strong> memory, and <strong>20KB of RAM</strong>, it offers plenty of flexibility for customization and experimentation.</p>
 <h2 id="arduino-ide">Arduino IDE<a class="headerlink" href="#arduino-ide" title="Permanent link">&para;</a></h2>
-<p>Because NiftyDrum is based on the same microcontroller as the Blue Pill, it is possible to program the board using the Arduino IDE.
-But for that, you first need to have a C++ compiler that targets the STM32F1.</p>
+<p>NiftyDrum uses the same microcontroller as the Blue Pill, which means you can program the board using the Arduino IDE. However, you'll first need to install a C++ compiler that targets the STM32F1.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>In this section, it is assumed that you have already installed the Arduino IDE.</p>
+<p>This section assumes you have already installed the Arduino IDE.</p>
 </div>
-<h3 id="arm-none-eabi-toolchain">ARM None-EABI toolchain<a class="headerlink" href="#arm-none-eabi-toolchain" title="Permanent link">&para;</a></h3>
-<p>If you are a Linux user, you can install the <strong>ARM None-EABI toolchain </strong>directly from your package manager. The package is typically named <strong><code>gcc-arm-none-eabi</code></strong>.
-For other platforms, download the official ARM toolchain from <a href="https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads" target="_blank">Developer.arm.com</a> – ARM GNU Toolchain Downloads. Make sure to select the correct version for your operating system.</p>
+<h3 id="arm-none-eabi-toolchain">ARM None-EABI Toolchain<a class="headerlink" href="#arm-none-eabi-toolchain" title="Permanent link">&para;</a></h3>
+<p><strong>Linux users</strong> can install the ARM None-EABI toolchain directly from their package manager. The package is typically named <code>gcc-arm-none-eabi</code>.</p>
+<p><strong>Windows and macOS users</strong> should download the official ARM toolchain from <a href="https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads" target="_blank">Developer.arm.com</a>. Make sure to select the correct version for your operating system.</p>
 <h3 id="arduino-stm32-sdk">Arduino STM32 SDK<a class="headerlink" href="#arduino-stm32-sdk" title="Permanent link">&para;</a></h3>
-<p>Assuming you have a working ARM None-EABI toolchain, you then need to get the Arduino STM32 RonnaTech SDK.</p>
+<p>Once you have a working ARM None-EABI toolchain, you will need to install the Arduino STM32 RonnaTech SDK.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Although it is called Arduino STM32 RonnaTech SDK, the SDK is a fork of <a href="https://github.com/rogerclarkmelbourne/Arduino_STM32" target="_blank">Roger Clark's Arduino STM32 repository</a> with some minor modifications.</p>
+<p>Although it's called Arduino STM32 RonnaTech SDK, this is actually a fork of <a href="https://github.com/rogerclarkmelbourne/Arduino_STM32" target="_blank">Roger Clark's Arduino STM32 repository</a> with some minor modifications.</p>
 </div>
-<p>The SDK is pretty simple to install and configure.
-Here is how to proceed:</p>
+<h4 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h4>
 <ul>
-<li>First, download and unzip the <a href="https://ronnatech.com/sdm_downloads/arduino_stm32/" target="_blank">Arduino STM32 RonnaTech SDK</a>.</li>
-<li>If you are a Linux user:<ul>
-<li>Go to your <code>home</code> diretory, then, into <code>Arduino</code> folder.</li>
-<li>Create a new folder named <code>hardware</code> and move the <code>Arduino_STM32</code> into that folder.</li>
+<li>Download and unzip the <a href="https://ronnatech.com/sdm_downloads/arduino_stm32/" target="_blank">Arduino STM32 RonnaTech SDK</a>.</li>
+<li>Move the unzipped <code>Arduino_STM32</code> folder to the appropriate location:<ul>
+<li><strong>Linux</strong>: Navigate to your home directory, then to the <code>Arduino</code> folder. Create a new folder named <code>hardware</code> and move <code>Arduino_STM32</code> into it.</li>
+<li><strong>Windows</strong>: Copy the <code>Arduino_STM32</code> folder to <code>My Documents/Arduino/hardware</code>. If the <code>hardware</code> folder doesn't exist, create it first. The final path should be <code>Documents/Arduino/hardware/Arduino_STM32</code>.</li>
+<li><strong>macOS</strong>: Place the <code>Arduino_STM32</code> folder inside <code>~/Documents/Arduino/hardware</code>. If the <code>hardware</code> folder doesn't exist, create it first. The final path should be <code>~/Documents/Arduino/hardware/Arduino_STM32</code>.</li>
 </ul>
 </li>
-<li>If you are a Windows user:</li>
 </ul>
-<p><a href="https://ronnatech.com/sdm_downloads/arduino_stm32/" target="_blank">Arduino STM32 SDK</a></p>
-<h3 id="blink">Blink<a class="headerlink" href="#blink" title="Permanent link">&para;</a></h3>
-<div class="language-cpp highlight"><span class="filename">blink.ino</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// the setup function runs once when you press reset or power the board</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="c1">// initialize digital pin LED _BUILTIN as an output.</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// the loop function runs over and over again forever</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// turn the LED on</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                      </span><span class="c1">// wait for a second</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">   </span><span class="c1">// turn the LED off </span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                      </span><span class="c1">// wait for a second</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
+<h4 id="configure-the-toolchain-path">Configure the Toolchain Path<a class="headerlink" href="#configure-the-toolchain-path" title="Permanent link">&para;</a></h4>
+<p>After installing the SDK, you need to specify the location of your ARM None-EABI toolchain.</p>
+<p>Create a new file named <code>platform.local.txt</code> in the <code>Arduino_STM32/STM32_F1</code> folder.</p>
+<p>If you installed the toolchain via a Linux package manager (e.g., <code>sudo apt install gcc-arm-none-eabi</code>), the compiler is typically located at <code>/usr/bin/arm-none-eabi-g++</code>. In this case, add the following to <code>platform.local.txt</code>:</p>
+<div class="language-text highlight"><span class="filename">Arduino_STM32/STM32_F1/platform.local.txt</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>runtime.tools.arm-none-eabi-gcc.path=/usr/bin/
+</span></code></pre></div>
+<p>Adjust the path according to your actual installation location.</p>
+<h3 id="arduino-ide-choose-the-correct-board">Arduino IDE: Choose the Correct Board<a class="headerlink" href="#arduino-ide-choose-the-correct-board" title="Permanent link">&para;</a></h3>
+<h3 id="blink-example">Blink Example<a class="headerlink" href="#blink-example" title="Permanent link">&para;</a></h3>
+<p>Writing code for the NiftyDrum board is as straightforward as programming any Arduino. Here's a simple blink example:</p>
+<div class="language-cpp highlight"><span class="filename">blink.ino</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// The setup function runs once when you press reset or power the board</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="c1">// Initialize digital pin LED_BUILTIN as an output</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">// The loop function runs repeatedly forever</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// Turn the LED on</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                      </span><span class="c1">// Wait for a second</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">   </span><span class="c1">// Turn the LED off </span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                      </span><span class="c1">// Wait for a second</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">}</span>
 </span></code></pre></div>
 
 
