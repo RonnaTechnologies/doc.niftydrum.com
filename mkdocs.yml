@@ -45,6 +45,8 @@ theme:
         name: Switch to system preference
 
 markdown_extensions:
+  - mdx_truly_sane_lists
+  - pymdownx.superfences
   - toc:
       permalink: true
   - footnotes
@@ -57,8 +59,6 @@ markdown_extensions:
   - admonition
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
-  - mdx_truly_sane_lists
   - pymdownx.tabbed:
       alternate_style: true
 
