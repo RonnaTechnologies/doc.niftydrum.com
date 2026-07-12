@@ -8,7 +8,7 @@ site_description: Official NiftyDrum documentation - comprehensive guides, tutor
 theme:
   name: material
   logo: assets/logo.png
-  favicon: assets/logo.png
+  favicon: assets/favicon.ico
   features:
     - navigation.tracking
     - navigation.tabs
