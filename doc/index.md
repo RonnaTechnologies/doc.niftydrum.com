@@ -30,7 +30,6 @@ In addition to that, we provide two **Arduino**-compatible SDKs:
 
 The SDKs give you tools to develop you own drum module.
 
-
 ## Specifications
 
 ### Hardware
