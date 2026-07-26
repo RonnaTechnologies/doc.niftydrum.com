@@ -120,17 +120,30 @@ body
     font-size: 14pt !important;
   }
 
-  
-  ul ul 
+
+  ul ul
   {
     margin-left: .4em !important;
     padding-left: .2em !important;
   }
-  
+
   ul ul li 
   {
     margin-left: .2em !important;
     padding-left: 0.1em !important;
+  }
+
+  ol
+  {
+    margin-left: 1.4em !important;
+    padding-left: .7em !important;
+  }
+  
+
+  ol li 
+  {
+    margin-left: .7em !important;
+    padding-left: 0.35em !important;
   }
 
   /* Table of Contents */

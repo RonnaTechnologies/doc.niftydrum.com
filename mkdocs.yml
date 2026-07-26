@@ -1,14 +1,14 @@
 site_name: NiftyDrum
 site_url: https://doc.niftydrum.com
 docs_dir: doc  # Changed from 'docs' to 'doc'
-copyright: Copyright &copy; 2025 Ronna Technologies
+copyright: Copyright &copy; 2026 Ronna Technologies
 repo_name: RonnaTechnologies/doc.niftydrum.com
 site_description: Official NiftyDrum documentation - comprehensive guides, tutorials, and reference materials for using NiftyDrum effectively.
 
 theme:
   name: material
   logo: assets/logo.png
-  favicon: assets/logo.png
+  favicon: assets/favicon.ico
   features:
     - navigation.tracking
     - navigation.tabs
@@ -47,6 +47,7 @@ theme:
 markdown_extensions:
   - mdx_truly_sane_lists
   - pymdownx.superfences
+  - pymdownx.keys
   - toc:
       permalink: true
   - footnotes
@@ -66,11 +67,11 @@ plugins:
   - search
   - with-pdf:
       author: Ronna Technologies
-      copyright: Copyright © 2025 Ronna Technologies
+      copyright: Copyright © 2026 Ronna Technologies
       cover_subtitle: Official Documentation
       output_path: pdf/niftydrum_documentation.pdf
       exclude_pages:
-        - 5.videos
+        - 6.videos
 
 extra:
   social:
