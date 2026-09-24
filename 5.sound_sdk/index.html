@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://doc.niftydrum.com/4.arduino/">
+        <link rel="canonical" href="https://doc.niftydrum.com/5.sound_sdk/">
       
       
-        <link rel="prev" href="../3.serial/">
+        <link rel="prev" href="../4.sensor_sdk/">
       
       
-        <link rel="next" href="../5.videos/">
+        <link rel="next" href="../6.videos/">
       
       
         
       
       
-      <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Arduino - NiftyDrum</title>
+        <title>Sound SDK - NiftyDrum</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arduino" class="md-skip">
+        <a href="#sound-sdk" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Arduino
+              Sound SDK
             
           </span>
         </div>
@@ -226,7 +226,7 @@
   
     
   
-  About NiftyDrum
+  NiftyDrum(+)
 
       </a>
     </li>
@@ -245,7 +245,7 @@
   
     
   
-  The Board
+  The Boards
 
       </a>
     </li>
@@ -264,7 +264,7 @@
   
     
   
-  The App
+  Trigger Module App
 
       </a>
     </li>
@@ -283,7 +283,26 @@
   
     
   
-  Serial Protocol
+  Firmware Serial Protocol
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../4.sensor_sdk/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Sensor SDK
 
       </a>
     </li>
@@ -304,7 +323,7 @@
   
     
   
-  Arduino
+  Sound SDK
 
       </a>
     </li>
@@ -317,7 +336,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../5.videos/" class="md-tabs__link">
+      <a href="../6.videos/" class="md-tabs__link">
         
   
   
@@ -384,7 +403,7 @@
   <span class="md-ellipsis">
     
   
-    About NiftyDrum
+    NiftyDrum(+)
   
 
     
@@ -411,7 +430,7 @@
   <span class="md-ellipsis">
     
   
-    The Board
+    The Boards
   
 
     
@@ -438,7 +457,7 @@
   <span class="md-ellipsis">
     
   
-    The App
+    Trigger Module App
   
 
     
@@ -465,7 +484,34 @@
   <span class="md-ellipsis">
     
   
-    Serial Protocol
+    Firmware Serial Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.sensor_sdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensor SDK
   
 
     
@@ -501,7 +547,7 @@
   <span class="md-ellipsis">
     
   
-    Arduino
+    Sound SDK
   
 
     
@@ -519,7 +565,7 @@
   <span class="md-ellipsis">
     
   
-    Arduino
+    Sound SDK
   
 
     
@@ -545,10 +591,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#thats-a-blue-pill" class="md-nav__link">
+  <a href="#wavetooeasy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        That's a Blue Pill
+        WaveTooEasy
       
     </span>
   </a>
@@ -556,56 +602,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arduino-ide" class="md-nav__link">
+  <a href="#ronnatech-stm32f401-core-sdk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Arduino IDE
+        RonnaTech STM32F401 Core SDK
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Arduino IDE">
+    <nav class="md-nav" aria-label="RonnaTech STM32F401 Core SDK">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#arm-none-eabi-toolchain" class="md-nav__link">
+  <a href="#installing-the-sdk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ARM None-EABI Toolchain
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#arduino-stm32-sdk" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Arduino STM32 SDK
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Arduino STM32 SDK">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installation-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installation Steps
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-the-toolchain-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configure the Toolchain Path
+        Installing the SDK
       
     </span>
   </a>
@@ -616,31 +628,37 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#arduino-ide-choose-the-correct-board" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#firmware-updates" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Arduino IDE: Choose the Correct Board
+        Firmware Updates
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#blink-example" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Blink Example
+        Resources
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#example-the-default-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: The Default Firmware
+      
+    </span>
+  </a>
   
 </li>
       
@@ -659,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5.videos/" class="md-nav__link">
+      <a href="../6.videos/" class="md-nav__link">
         
   
   
@@ -696,59 +714,34 @@
 
 
 
-<h1 id="arduino">Arduino<a class="headerlink" href="#arduino" title="Permanent link">&para;</a></h1>
-<h2 id="thats-a-blue-pill">That's a Blue Pill<a class="headerlink" href="#thats-a-blue-pill" title="Permanent link">&para;</a></h2>
-<p>NiftyDrum is powered by the <strong>STM32F103C8T6</strong> microcontroller, the same chip found in the iconic "<strong>Blue Pill</strong>" development board.</p>
-<p>If you're unfamiliar with the Blue Pill, it’s a widely recognized and versatile board based on the STM32F103C microcontroller family. With <strong>72MHz</strong> clock speed, <strong>64KB of flash</strong> memory, and <strong>20KB of RAM</strong>, it offers plenty of flexibility for customization and experimentation.</p>
-<h2 id="arduino-ide">Arduino IDE<a class="headerlink" href="#arduino-ide" title="Permanent link">&para;</a></h2>
-<p>NiftyDrum uses the same microcontroller as the Blue Pill, which means you can program the board using the Arduino IDE. However, you'll first need to install a C++ compiler that targets the STM32F1.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This section assumes you have already installed the Arduino IDE.</p>
-</div>
-<h3 id="arm-none-eabi-toolchain">ARM None-EABI Toolchain<a class="headerlink" href="#arm-none-eabi-toolchain" title="Permanent link">&para;</a></h3>
-<p><strong>Linux users</strong> can install the ARM None-EABI toolchain directly from their package manager. The package is typically named <code>gcc-arm-none-eabi</code>.</p>
-<p><strong>Windows and macOS users</strong> should download the official ARM toolchain from <a href="https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads" target="_blank">Developer.arm.com</a>. Make sure to select the correct version for your operating system.</p>
-<h3 id="arduino-stm32-sdk">Arduino STM32 SDK<a class="headerlink" href="#arduino-stm32-sdk" title="Permanent link">&para;</a></h3>
-<p>Once you have a working ARM None-EABI toolchain, you will need to install the Arduino STM32 RonnaTech SDK.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although it's called Arduino STM32 RonnaTech SDK, this is actually a fork of <a href="https://github.com/rogerclarkmelbourne/Arduino_STM32" target="_blank">Roger Clark's Arduino STM32 repository</a> with some minor modifications.</p>
-</div>
-<h4 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h4>
+<h1 id="sound-sdk">Sound SDK<a class="headerlink" href="#sound-sdk" title="Permanent link">&para;</a></h1>
+<h2 id="wavetooeasy">WaveTooEasy<a class="headerlink" href="#wavetooeasy" title="Permanent link">&para;</a></h2>
+<p>The sound functionality of the board is based on <strong><a href="https://www.artekit.eu/doc/guides/wavetooeasy/" target="_blank">WaveTooEasy</a></strong>, a polyphonic WAV player developed by <a href="https://www.artekit.eu/" target="_blank">ArteKit Labs</a>.</p>
+<p>Key Differences in NiftyDrum+:</p>
 <ul>
-<li>Download and unzip the <a href="https://ronnatech.com/sdm_downloads/arduino_stm32/" target="_blank">Arduino STM32 RonnaTech SDK</a>.</li>
-<li>Move the unzipped <code>Arduino_STM32</code> folder to the appropriate location:<ul>
-<li><strong>Linux</strong>: Navigate to your home directory, then to the <code>Arduino</code> folder. Create a new folder named <code>hardware</code> and move <code>Arduino_STM32</code> into it.</li>
-<li><strong>Windows</strong>: Copy the <code>Arduino_STM32</code> folder to <code>My Documents/Arduino/hardware</code>. If the <code>hardware</code> folder doesn't exist, create it first. The final path should be <code>Documents/Arduino/hardware/Arduino_STM32</code>.</li>
-<li><strong>macOS</strong>: Place the <code>Arduino_STM32</code> folder inside <code>~/Documents/Arduino/hardware</code>. If the <code>hardware</code> folder doesn't exist, create it first. The final path should be <code>~/Documents/Arduino/hardware/Arduino_STM32</code>.</li>
+<li>Uses a <strong>PCM5102A</strong> audio DAC instead of the LM49450.</li>
+<li>The <strong>ArteKit STM32F401 Core</strong> has been slightly modified to include an analog input.</li>
+<li><strong>GCC 13.2</strong> is used to provide <strong>C++20</strong> support.</li>
 </ul>
+<h2 id="ronnatech-stm32f401-core-sdk">RonnaTech STM32F401 Core SDK<a class="headerlink" href="#ronnatech-stm32f401-core-sdk" title="Permanent link">&para;</a></h2>
+<p>The <strong>RonnaTech STM32F401 Core SDK</strong> is 99% identical to the <strong>ArteKit STM32F401 Core SDK</strong> and primarily targets the <strong><code>STM32F401RCT6</code></strong> microcontroller. It responds to <strong>UART</strong> for streaming sounds from a microSD card.</p>
+<h3 id="installing-the-sdk">Installing the SDK<a class="headerlink" href="#installing-the-sdk" title="Permanent link">&para;</a></h3>
+<p>Here are the steps to follow to install the SDK and use it in the Arduino IDE: </p>
+<ol>
+<li>Open <strong>File &gt; Preferences</strong> in the Arduino IDE.</li>
+<li>
+<p>Add the following URL to the <strong>Additional boards manager URLs</strong> field:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://ronnatech.com/wp-content/uploads/package_ronnatech_index.json
+</span></code></pre></div>
 </li>
-</ul>
-<h4 id="configure-the-toolchain-path">Configure the Toolchain Path<a class="headerlink" href="#configure-the-toolchain-path" title="Permanent link">&para;</a></h4>
-<p>After installing the SDK, you need to specify the location of your ARM None-EABI toolchain.</p>
-<p>Create a new file named <code>platform.local.txt</code> in the <code>Arduino_STM32/STM32_F1</code> folder.</p>
-<p>If you installed the toolchain via a Linux package manager (e.g., <code>sudo apt install gcc-arm-none-eabi</code>), the compiler is typically located at <code>/usr/bin/arm-none-eabi-g++</code>. In this case, add the following to <code>platform.local.txt</code>:</p>
-<div class="language-text highlight"><span class="filename">Arduino_STM32/STM32_F1/platform.local.txt</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>runtime.tools.arm-none-eabi-gcc.path=/usr/bin/
-</span></code></pre></div>
-<p>Adjust the path according to your actual installation location.</p>
-<h3 id="arduino-ide-choose-the-correct-board">Arduino IDE: Choose the Correct Board<a class="headerlink" href="#arduino-ide-choose-the-correct-board" title="Permanent link">&para;</a></h3>
-<h3 id="blink-example">Blink Example<a class="headerlink" href="#blink-example" title="Permanent link">&para;</a></h3>
-<p>Writing code for the NiftyDrum board is as straightforward as programming any Arduino. Here's a simple blink example:</p>
-<div class="language-cpp highlight"><span class="filename">blink.ino</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// The setup function runs once when you press reset or power the board</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="c1">// Initialize digital pin LED_BUILTIN as an output</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">// The loop function runs repeatedly forever</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// Turn the LED on</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                      </span><span class="c1">// Wait for a second</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">   </span><span class="c1">// Turn the LED off </span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                      </span><span class="c1">// Wait for a second</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">}</span>
-</span></code></pre></div>
+<li>
+<p>Open the Boards Manager and search for RonnaTech.</p>
+</li>
+<li>Select <code>Ronna Technologies STM32F401</code> boards and install the latest version.</li>
+</ol>
+<h2 id="firmware-updates">Firmware Updates<a class="headerlink" href="#firmware-updates" title="Permanent link">&para;</a></h2>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<h2 id="example-the-default-firmware">Example: The Default Firmware<a class="headerlink" href="#example-the-default-firmware" title="Permanent link">&para;</a></h2>
 
 
 
@@ -786,7 +779,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../3.serial/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Serial Protocol">
+          <a href="../4.sensor_sdk/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sensor SDK">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -796,14 +789,14 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Serial Protocol
+                Sensor SDK
               </div>
             </div>
           </a>
         
         
           
-          <a href="../5.videos/" class="md-footer__link md-footer__link--next" aria-label="Next: Video Tutorials">
+          <a href="../6.videos/" class="md-footer__link md-footer__link--next" aria-label="Next: Video Tutorials">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
@@ -826,7 +819,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2025 Ronna Technologies
+      Copyright &copy; 2026 Ronna Technologies
     </div>
   
   
@@ -866,7 +859,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

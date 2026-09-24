@@ -20,8 +20,8 @@
         
       
       
-      <link rel="icon" href="assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <link rel="icon" href="assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#about-niftydrum" class="md-skip">
+        <a href="#niftydrum" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              About NiftyDrum
+              NiftyDrum(+)
             
           </span>
         </div>
@@ -226,7 +226,7 @@
   
     
   
-  About NiftyDrum
+  NiftyDrum(+)
 
       </a>
     </li>
@@ -245,7 +245,7 @@
   
     
   
-  The Board
+  The Boards
 
       </a>
     </li>
@@ -264,7 +264,7 @@
   
     
   
-  The App
+  Trigger Module App
 
       </a>
     </li>
@@ -283,7 +283,7 @@
   
     
   
-  Serial Protocol
+  Firmware Serial Protocol
 
       </a>
     </li>
@@ -296,13 +296,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="4.arduino/" class="md-tabs__link">
+      <a href="4.sensor_sdk/" class="md-tabs__link">
         
   
   
     
   
-  Arduino
+  Sensor SDK
 
       </a>
     </li>
@@ -315,7 +315,26 @@
   
   
     <li class="md-tabs__item">
-      <a href="5.videos/" class="md-tabs__link">
+      <a href="5.sound_sdk/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Sound SDK
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="6.videos/" class="md-tabs__link">
         
   
   
@@ -391,7 +410,7 @@
   <span class="md-ellipsis">
     
   
-    About NiftyDrum
+    NiftyDrum(+)
   
 
     
@@ -409,7 +428,7 @@
   <span class="md-ellipsis">
     
   
-    About NiftyDrum
+    NiftyDrum(+)
   
 
     
@@ -450,6 +469,17 @@
     <span class="md-ellipsis">
       
         How It Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-makes-the-project-special" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Makes the Project Special
       
     </span>
   </a>
@@ -528,7 +558,7 @@
   <span class="md-ellipsis">
     
   
-    The Board
+    The Boards
   
 
     
@@ -555,7 +585,7 @@
   <span class="md-ellipsis">
     
   
-    The App
+    Trigger Module App
   
 
     
@@ -582,7 +612,7 @@
   <span class="md-ellipsis">
     
   
-    Serial Protocol
+    Firmware Serial Protocol
   
 
     
@@ -602,14 +632,14 @@
   
   
     <li class="md-nav__item">
-      <a href="4.arduino/" class="md-nav__link">
+      <a href="4.sensor_sdk/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Arduino
+    Sensor SDK
   
 
     
@@ -629,7 +659,34 @@
   
   
     <li class="md-nav__item">
-      <a href="5.videos/" class="md-nav__link">
+      <a href="5.sound_sdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sound SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="6.videos/" class="md-nav__link">
         
   
   
@@ -666,11 +723,14 @@
 
 
 
-<h1 id="about-niftydrum">About NiftyDrum<a class="headerlink" href="#about-niftydrum" title="Permanent link">&para;</a></h1>
+<h1 id="niftydrum">NiftyDrum(+)<a class="headerlink" href="#niftydrum" title="Permanent link">&para;</a></h1>
 <p><img alt="NiftyDrum Logo" class="light-mode-only center" src="assets/nd-logo.png" width="400" />
 <img alt="NiftyDrum Logo" class="dark-mode-only center" src="assets/nd-logo-dark.png" width="400" /></p>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p>NiftyDrum is a trigger-to-MIDI conversion module that transforms piezo and FSR sensor inputs into MIDI messages. Connect up to 9 piezo sensors and 1 FSR (Force Sensing Resistor) to the dedicated terminal blocks, then receive MIDI data via USB-C connection.</p>
+<ul>
+<li><strong>NiftyDrum</strong> is a trigger-to-MIDI conversion module that transforms piezo and FSR sensor inputs into MIDI messages. Connect up to 9 piezo sensors and 1 FSR (Force Sensing Resistor) to the dedicated terminal blocks, then receive MIDI data via USB-C connection.</li>
+<li><strong>NiftyDrum+</strong> is a single, unified board combining our NiftyDrum's sensor-to-MIDI interface with a powerful sound engine. Sound samples are stored on a microSD card, and are streamed to a 3.5mm jack output.</li>
+</ul>
 <h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
 <p>NiftyDrum delivers high-level MIDI performance in 4 easy steps:</p>
 <ul>
@@ -679,6 +739,16 @@
 <li><strong>Configure</strong>: Use the web-based GUI to adjust trigger parameters, MIDI mapping, and velocity curves</li>
 <li><strong>Play</strong>: Notes are transmitted instantly with imperceptible latency</li>
 </ul>
+<p>A fifth step can be added: <strong>Use NiftyDrum+ sound engine and get a fully-featured drum module.</strong></p>
+<h2 id="what-makes-the-project-special">What Makes the Project Special<a class="headerlink" href="#what-makes-the-project-special" title="Permanent link">&para;</a></h2>
+<p>NiftyDrum and NiftyDrym+ both ship with their own firmware.
+This make NiftyDrum+ a fully-featured drum module by default.
+In addition to that, we provide two <strong>Arduino</strong>-compatible SDKs:</p>
+<ul>
+<li><a href="4.sensor_sdk/">A Sensor SDK</a></li>
+<li><a href="5.sound_sdk/">A Sound SDK</a></li>
+</ul>
+<p>The SDKs give you tools to develop you own drum module.</p>
 <h2 id="specifications">Specifications<a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
 <h3 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h3>
 <ul>
@@ -687,12 +757,15 @@
 <li><strong>Connector type</strong>: Terminal blocks</li>
 <li><strong>USB interface</strong>: Type-C</li>
 <li><strong>Dimensions</strong>: 65 × 56.5 mm</li>
+<li><strong>Audio</strong>: TRS 3.5mm (⅛")</li>
 </ul>
 <h3 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Latency</strong>: &lt;2.5 ms</li>
-<li><strong>Sample rate</strong>: &gt;10 kHz</li>
+<li><strong>Sensor Sampling rate</strong>: &gt;10 kHz</li>
 <li><strong>Velocity resolution</strong>: 127 levels (full MIDI range)</li>
+<li><strong>Trigger to Sound Latency</strong>: &lt;10ms</li>
+<li><strong>Audio Sampling Rate</strong>: ≥44.1kHz</li>
 </ul>
 <h3 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h3>
 <ul>
@@ -700,6 +773,7 @@
 <li><strong>User interface</strong>: Web-based application</li>
 <li><strong>Firmware updates</strong>: Via USB</li>
 <li><strong>MIDI output</strong>: Note messages and Control Changes (CC)</li>
+<li><strong>Development</strong>: Arduino SDKs</li>
 </ul>
 
 
@@ -739,13 +813,13 @@
         
         
           
-          <a href="1.board/" class="md-footer__link md-footer__link--next" aria-label="Next: The Board">
+          <a href="1.board/" class="md-footer__link md-footer__link--next" aria-label="Next: The Boards">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                The Board
+                The Boards
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -762,7 +836,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2025 Ronna Technologies
+      Copyright &copy; 2026 Ronna Technologies
     </div>
   
   
@@ -802,7 +876,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
